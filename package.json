@@ -1,6 +1,6 @@
 {
   "name": "@nodulus/core",
-  "version": "1.0.2",
+  "version": "1.0.8",
   "description": "",
   "main": "app.js",
   "typescript": {
@@ -32,7 +32,8 @@
   },
   "dependencies": {
     "@nodulus/api": "*",
-    "@nodulus/config": "*",
+    "@nodulus/cache": "*",
+    "@nodulus/config": "^1.0.53",
     "@nodulus/data": "*",
     "@nodulus/run": "*",
     "body-parser": "^1.15.2",
