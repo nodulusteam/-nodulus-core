@@ -86,8 +86,7 @@ app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 // }
 // );
 
-// console.log(">>>>> initialize nodulus middleware");
-// app.use(require('@nodulus/run'));
+
 
 module.exports = app;
 

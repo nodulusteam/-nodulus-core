@@ -1,6 +1,6 @@
 {
   "name": "@nodulus/core",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "",
   "main": "app.js",
   "typescript": {
@@ -35,7 +35,7 @@
     "@nodulus/cache": "*",
     "@nodulus/config": "^1.0.53",
     "@nodulus/data": "*",
-    "@nodulus/run": "*",
+   
     "body-parser": "^1.15.2",
     "cookie-parser": "^1.4.3",
     "express": "^4.14.0"
