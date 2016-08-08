@@ -12,7 +12,7 @@ var querystring = require('querystring');
 var dal = require('@nodulus/data');
 var config = require('@nodulus/config').config;
 //var SocketUse = require('./classes/socket.js');
-var webServer = require('./lib/webServer.js');
+var webServer = require('./lib/web-server.js');
 var api = require('@nodulus/api');
 var cache = require("@nodulus/cache");
 
