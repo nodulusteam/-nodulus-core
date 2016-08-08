@@ -1,7 +1,7 @@
 {
   "name": "@nodulus/core",
-  "version": "1.0.10",
-  "description": "",
+  "version": "1.0.13",
+  "description": "core http component for nodulus using express",
   "main": "app.js",
   "typescript": {
     "definition": "index.d.ts"
@@ -13,7 +13,12 @@
     "type": "git",
     "url": "https://github.com/nodulusteam/-nodulus-core"
   },
-  "author": "",
+  "keywords": [
+    "nodulus",
+    "core",
+    "framework"
+  ],
+  "author": "nodulus",
   "license": "ISC",
   "devDependencies": {
     "chai": "^3.5.0",
@@ -31,11 +36,11 @@
     "typescript": "^1.8.10"
   },
   "dependencies": {
-    "@nodulus/api": "*",
-    "@nodulus/cache": "*",
+    "@nodulus/api": "1.0.11",
+    "@nodulus/cache": "1.0.6",
     "@nodulus/config": "^1.0.53",
-    "@nodulus/data": "*",
-   
+    "@nodulus/data": "1.0.14",
+    "@nodulus/logs": "^0.0.17",
     "body-parser": "^1.15.2",
     "cookie-parser": "^1.4.3",
     "express": "^4.14.0"
