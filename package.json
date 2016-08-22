@@ -1,6 +1,6 @@
 {
   "name": "@nodulus/core",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "description": "core http component for nodulus using express",
   "main": "app.js",
   "typescript": {
