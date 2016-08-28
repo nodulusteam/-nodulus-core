@@ -9,15 +9,15 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var url = require('url');
 var querystring = require('querystring');
-var dal = require('@nodulus/data');
+ 
 var config = require('@nodulus/config').config;
 var webServer = require('./lib/web-server.js');
 var api = require('@nodulus/api');
-var cache = require("@nodulus/cache");
+ 
 
 var EventEmitter = require('events').EventEmitter;
 global.eventServer = new EventEmitter();
-global.cache = cache;
+ 
 
 
 
