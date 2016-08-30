@@ -70,6 +70,7 @@ else {
 
 module.exports = app;
 module.exports.static = express.static;
+module.exports.Router = express.Router;
 module.exports.server = server;
 
 
