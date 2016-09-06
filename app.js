@@ -4,24 +4,19 @@ var express = require('express');
 var fs = require('fs');
 var path = require('path');
 
-
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var url = require('url');
 var querystring = require('querystring');
- 
-var config = require('@nodulus/config').config;
-var webServer = require('./lib/web-server.js');
-var api = require('@nodulus/api');
- 
+var busboy = require('connect-busboy');
 
+var webServer = require('./lib/web-server.js');
+
+var cors = require('cors');
 var EventEmitter = require('events').EventEmitter;
 global.eventServer = new EventEmitter();
- 
 
-
-
-var server = null;require('http')
+var server = null;
 var app = null;
 if (global.nodulus_app) {
     app = global.nodulus_app;
@@ -30,10 +25,6 @@ if (global.nodulus_app) {
 else {
     app = express();
     global.nodulus_app = app;
-
-
-
-
     var http = require("http").createServer(app);
     server = require('http').Server(app);
     global.nodulus_server = server;
@@ -44,9 +35,6 @@ else {
         // console.log("socket listen on:" + io)
         // SocketUse(io);
     });
-
-
-
     var regexIso8601 = /^(\d{4}|\+\d{6})(?:-(\d{2})(?:-(\d{2})(?:T(\d{2}):(\d{2}):(\d{2})\.(\d{1,})(Z|([\-+])(\d{2}):(\d{2}))?)?)?)?$/;
     app.use(bodyParser.json({
         reviver: function (key, value) {
@@ -61,9 +49,10 @@ else {
         },
         limit: '50mb',
     }));
-
-    app.use(bodyParser.json()); // for parsing application/json
+    
     app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
+    app.use(cors());
+    app.use(busboy());
 }
 
 
