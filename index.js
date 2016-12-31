@@ -1,4 +1,7 @@
 var selectedCore = null;
+if (!global.nodulus)
+    global.nodulus = {};
+    
 if (global.nodulus && global.nodulus.core) {
     selectedCore = global.nodulus.core;
 }
