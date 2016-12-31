@@ -1,2 +1,8 @@
 *.ts
 typings
+logs
+data
+.vscode
+output
+tests
+templates
